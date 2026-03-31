@@ -58,18 +58,34 @@ Beyond the core identity prompt, the system includes specialized agent prompts, 
 | 15 | [Session Search](prompts/15_session_search.md) | `agenticSessionSearch.ts` | Semantic search across past conversation sessions |
 | 16 | [Memory Selection](prompts/16_memory_selection.md) | `findRelevantMemories.ts` | Selects relevant memory files for query context |
 | 17 | [Auto Mode Critique](prompts/17_auto_mode_critique.md) | `autoMode.ts` | Reviews user-written auto-mode classifier rules |
+| 20 | [Session Title](prompts/20_session_title.md) | `sessionTitle.ts` | Haiku-powered 3-7 word session title generator |
+| 29 | [Agent Summary](prompts/29_agent_summary.md) | `agentSummary.ts` | Periodic progress updates for sub-agents in coordinator mode |
+| 30 | [Prompt Suggestion](prompts/30_prompt_suggestion.md) | `promptSuggestion.ts` | Predicts user follow-up commands for clickable suggestions |
+
+### Context Window Management
+
+| # | Prompt | Source | Description |
+|---|--------|--------|-------------|
+| 21 | [Compact Service](prompts/21_compact_service.md) | `compact/prompt.ts` | Multi-variant conversation summarization with analysis/summary blocks |
+| 22 | [Away Summary](prompts/22_away_summary.md) | `awaySummary.ts` | 1-3 sentence session recap for returning users |
 
 ### Dynamic Sections
 
 | # | Prompt | Source | Description |
 |---|--------|--------|-------------|
 | 18 | [Proactive Mode](prompts/18_proactive_mode.md) | `prompts.ts` | Autonomous agent with tick-based pacing and terminal focus awareness |
+| 23 | [Chrome Browser Automation](prompts/23_chrome_browser_automation.md) | `claudeInChrome/prompt.ts` | Claude-in-Chrome extension: GIF recording, tab management, dialog handling |
+| 24 | [Memory Instruction](prompts/24_memory_instruction.md) | `claudemd.ts` | CLAUDE.md loading, @include directives, and frontmatter globs |
 
 ### Bundled Skills
 
 | # | Prompt | Source | Description |
 |---|--------|--------|-------------|
 | 19 | [Simplify Skill](prompts/19_simplify_skill.md) | Bundled binary | Three-agent parallel review for code reuse, quality, and efficiency |
+| 25 | [Skillify Skill](prompts/25_skillify.md) | Bundled binary | Interview-based skill creation, generates SKILL.md files |
+| 26 | [Stuck Skill](prompts/26_stuck_skill.md) | Bundled binary | Internal diagnostic for frozen or slow sessions |
+| 27 | [Remember Skill](prompts/27_remember_skill.md) | Bundled binary | Promotes auto-memory entries into CLAUDE.md files |
+| 28 | [Update Config Skill](prompts/28_update_config_skill.md) | Bundled binary | Manages settings.json, hooks, and permission arrays |
 
 ## Architecture
 
@@ -115,6 +131,40 @@ The auto-approval system uses a separate classifier prompt assembled from:
 3. **User overrides** from `settings.autoMode` that replace sections entirely
 4. **2-stage classification**: Stage 1 runs fast, Stage 2 uses extended thinking if the initial result is uncertain
 
+### Context Window Pipeline
+
+```
+User Message
+    |
+    v
+[Micro-Compaction]  -- Cache-aware tool result deletion (time/count triggers)
+    |
+    v
+[Compact Service]   -- Full/partial summarization with analysis blocks
+    |
+    v
+[Prompt Suggestion] -- Predict next user command (async, non-blocking)
+    |
+    v
+[Away Summary]      -- Session recap if user was idle
+```
+
+### Memory System
+
+```
+Memory Loading Order (first loaded = lowest priority):
+    |
+    |-- /etc/claude-code/CLAUDE.md          Managed (enterprise)
+    |-- ~/.claude/CLAUDE.md                 User (global)
+    |-- <project>/CLAUDE.md                 Project (shared)
+    |-- <project>/.claude/CLAUDE.md         Project (shared)
+    |-- <project>/.claude/rules/*.md        Project rules (shared)
+    |-- <project>/CLAUDE.local.md           Local (private, git-ignored)
+    |
+    |   @include directives resolve transitively (max depth: 5)
+    |   Frontmatter `paths:` field enables conditional injection
+```
+
 ### Environment Variables
 
 | Variable | Effect |
@@ -148,6 +198,17 @@ claude-code-system-prompts/
         17_auto_mode_critique.md
         18_proactive_mode.md
         19_simplify_skill.md
+        20_session_title.md
+        21_compact_service.md
+        22_away_summary.md
+        23_chrome_browser_automation.md
+        24_memory_instruction.md
+        25_skillify.md
+        26_stuck_skill.md
+        27_remember_skill.md
+        28_update_config_skill.md
+        29_agent_summary.md
+        30_prompt_suggestion.md
 ```
 
 ## Disclaimer
